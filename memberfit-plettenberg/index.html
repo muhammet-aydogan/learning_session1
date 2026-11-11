@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Memberfit Plettenberg – Dein Fitnessstudio in Plettenberg</title>
+    <meta
+      name="description"
+      content="Memberfit Plettenberg: Cardio- und Krafttraining, Personal Training, individuelle Trainings- und Ernährungskonzepte, kostenlose Getränkeflatrate und Parkplätze."
+    />
+    <meta name="theme-color" content="#0b0b0c" />
+    <!-- Entwurf: nicht indexieren. Vor Livegang entfernen. -->
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link
+      rel="preload"
+      as="image"
+      href="/images/hero-athletin-1920.webp"
+      imagesrcset="/images/hero-athletin-960.webp 960w, /images/hero-athletin-1920.webp 1920w"
+      imagesizes="100vw"
+    />
+    <script>
+      document.documentElement.classList.add('js');
+      // Sicherheitsnetz: Inhalte spätestens nach 3 s zeigen, falls das Skript nicht lädt.
+      setTimeout(function () { document.documentElement.classList.add('is-ready'); }, 3000);
+    </script>
+    <script type="module" src="/src/main.js"></script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Zum Inhalt springen</a>
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+    <!-- ============ A. NAVIGATION ============ -->
+    <header class="nav" id="nav">
+      <div class="nav__inner">
+        <a class="brand" href="#start" aria-label="Memberfit Plettenberg – Startseite">
+          <img class="brand__mark" src="/images/logo-mf.webp" width="640" height="400" alt="" />
+          <span class="brand__text">
+            <span class="brand__name">MemberFit</span>
+            <span class="brand__place">Plettenberg</span>
+          </span>
+        </a>
+
+        <nav class="nav__links" aria-label="Hauptnavigation">
+          <a href="#start" data-nav>Startseite</a>
+          <a href="#training" data-nav>Training</a>
+          <a href="#ausstattung" data-nav>Ausstattung</a>
+          <a href="#studio" data-nav>Studio</a>
+          <a href="#faq" data-nav>FAQ</a>
+          <a href="#kontakt" data-nav>Kontakt</a>
+        </nav>
+
+        <a class="btn btn--primary btn--sm nav__cta" href="#mitgliedschaft">
+          <span>Jetzt Mitglied werden</span>
+        </a>
+
+        <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Menü öffnen">
+          <span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true" inert>
+      <nav class="mobile-menu__links" aria-label="Mobile Navigation">
+        <a href="#start"><em>01</em>Startseite</a>
+        <a href="#training"><em>02</em>Training</a>
+        <a href="#ausstattung"><em>03</em>Ausstattung</a>
+        <a href="#studio"><em>04</em>Studio</a>
+        <a href="#faq"><em>05</em>FAQ</a>
+        <a href="#kontakt"><em>06</em>Kontakt</a>
+      </nav>
+      <div class="mobile-menu__foot">
+        <a class="btn btn--primary btn--block" href="#mitgliedschaft"><span>Jetzt Mitglied werden</span></a>
+        <p class="mobile-menu__claim">Fitness · Gesundheit · Lifestyle</p>
+      </div>
+    </div>
+
+    <main id="main">
+      <!-- ============ B. HERO ============ -->
+      <section class="hero" id="start" data-section>
+        <div class="hero__media" aria-hidden="true">
+          <img
+            class="hero__img"
+            data-hero-img
+            src="/images/hero-athletin-1920.webp"
+            srcset="/images/hero-athletin-960.webp 960w, /images/hero-athletin-1920.webp 1920w"
+            sizes="100vw"
+            width="1920"
+            height="1080"
+            alt=""
+            fetchpriority="high"
+          />
+          <div class="hero__overlay"></div>
+          <div class="hero__glow"></div>
+        </div>
+
+        <div class="container hero__content">
+          <p class="eyebrow" data-hero-fade><span class="eyebrow__dot"></span>Fitnessstudio in Plettenberg</p>
+          <h1 class="hero__title" aria-label="Dein Training. Dein Fortschritt. Dein Memberfit.">
+            <span class="line" aria-hidden="true"><span data-hero-line>Dein Training.</span></span>
+            <span class="line" aria-hidden="true"><span data-hero-line>Dein Fortschritt.</span></span>
+            <span class="line" aria-hidden="true"><span data-hero-line class="text-gold">Dein Memberfit.</span></span>
+          </h1>
+          <p class="hero__lead" data-hero-fade>
+            Entdecke dein Trainingserlebnis in Plettenberg. Moderne Ausstattung, persönliche Betreuung und die
+            richtige Umgebung für deine Ziele.
+          </p>
+          <div class="hero__actions" data-hero-fade>
+            <a class="btn btn--primary btn--lg" href="#mitgliedschaft">
+              <span>Jetzt Mitglied werden</span>
+              <svg class="btn__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </a>
+            <a class="btn btn--ghost btn--lg" href="#studio"><span>Studio entdecken</span></a>
+          </div>
+        </div>
+
+        <ul class="hero__facts container" data-hero-fade>
+          <li>Cardio &amp; Kraft</li>
+          <li>Personal Training</li>
+          <li>Getränkeflatrate inklusive</li>
+          <li>Kostenlos parken</li>
+        </ul>
+
+        <a class="scroll-hint" href="#vorteile" data-hero-fade aria-label="Weiter zu den Vorteilen">
+          <span class="scroll-hint__label">Scroll</span>
+          <span class="scroll-hint__line"></span>
+        </a>
+      </section>
+
+      <!-- Laufband: Marken-Claim aus dem Logo -->
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span>Fitness</span><i></i><span class="is-outline">Gesundheit</span><i></i><span>Lifestyle</span><i></i>
+          <span class="is-outline">Plettenberg</span><i></i>
+          <span>Fitness</span><i></i><span class="is-outline">Gesundheit</span><i></i><span>Lifestyle</span><i></i>
+          <span class="is-outline">Plettenberg</span><i></i>
+        </div>
+      </div>
+
+      <!-- ============ C. VORTEILE / USPs ============ -->
+      <section class="section usps" id="vorteile" data-section>
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow" data-reveal><span class="eyebrow__dot"></span>Deine Vorteile</p>
+            <h2 class="h2" data-reveal-title>Alles drin.<br /><span class="text-gold">Nichts versteckt.</span></h2>
+          </header>
+
+          <ul class="usp-grid">
+            <li class="usp" data-reveal data-cursor-glow>
+              <span class="usp__no">01</span>
+              <svg class="usp__icon" viewBox="0 0 48 48" aria-hidden="true">
+                <circle class="draw" cx="18" cy="15" r="6" />
+                <path class="draw" d="M6 39c0-7 5.4-12 12-12s12 5 12 12" />
+                <circle class="draw accent" cx="34" cy="19" r="4.5" />
+                <path class="draw accent" d="M33 29c5.6.4 9 4.4 9 10" />
+              </svg>
+              <h3 class="usp__title">Persönliche Betreuung</h3>
+              <p class="usp__text">
+                Während deines Trainings stehen dir unsere Trainer jederzeit zur Verfügung – bei Fragen zum
+                Training, zum Programm oder zu den Geräten.
+              </p>
+            </li>
+            <li class="usp" data-reveal data-cursor-glow>
+              <span class="usp__no">02</span>
+              <svg class="usp__icon usp__icon--lift" viewBox="0 0 48 48" aria-hidden="true">
+                <path class="draw" d="M14 24h20" />
+                <rect class="draw" x="8" y="15" width="6" height="18" rx="2" />
+                <rect class="draw" x="34" y="15" width="6" height="18" rx="2" />
+                <path class="draw accent" d="M4 20v8M44 20v8" />
+              </svg>
+              <h3 class="usp__title">Moderne Trainings­ausstattung</h3>
+              <p class="usp__text">
+                Eine erstklassige, moderne und vielfältige Ausstattung mit Trainingsgeräten für Cardio- und
+                Krafttraining.
+              </p>
+            </li>
+            <li class="usp" data-reveal data-cursor-glow>
+              <span class="usp__no">03</span>
+              <svg class="usp__icon usp__icon--drink" viewBox="0 0 48 48" aria-hidden="true">
+                <path class="draw" d="M19 6h10v6l4 6v22a3 3 0 0 1-3 3H18a3 3 0 0 1-3-3V18l4-6z" />
+                <path class="draw accent" d="M15 26c3-2 6 2 9 0s6 2 9 0" />
+                <path class="draw" d="M19 12h10" />
+              </svg>
+              <h3 class="usp__title">Kostenlose Getränke­flatrate</h3>
+              <p class="usp__text">
+                Unbegrenzt kostenfreie Getränke – jederzeit während deines Trainings, so oft du möchtest.
+              </p>
+            </li>
+            <li class="usp" data-reveal data-cursor-glow>
+              <span class="usp__no">04</span>
+              <svg class="usp__icon usp__icon--park" viewBox="0 0 48 48" aria-hidden="true">
+                <rect class="draw" x="7" y="7" width="34" height="34" rx="9" />
+                <path class="draw accent" d="M19 35V14h7a6.5 6.5 0 0 1 0 13h-7" />
+              </svg>
+              <h3 class="usp__title">Kostenlose Parkplätze</h3>
+              <p class="usp__text">
+                Parke kostenlos direkt vor unserem Studio – für eine entspannte und unkomplizierte Anreise.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============ D. TRAINING & BETREUUNG ============ -->
+      <section class="section training" id="training" data-section>
+        <div class="container training__grid">
+          <div class="training__visual">
+            <figure class="training__photo" data-reveal="clip">
+              <img
+                data-parallax="8"
+                src="/images/training-kabelzug-1600.webp"
+                srcset="/images/training-kabelzug-800.webp 800w, /images/training-kabelzug-1600.webp 1600w"
+                sizes="(min-width: 1000px) 130vw, 200vw"
+                width="1600"
+                height="900"
+                loading="lazy"
+                alt="Athletin beim Training am Kabelzug"
+              />
+            </figure>
+            <div class="training__badge" data-reveal data-float>
+              <strong>Persönlich.</strong>
+              <span>Trainings- und Ernährungskonzepte mit unseren Trainern</span>
+            </div>
+            <span class="training__word" aria-hidden="true" data-drift="-12">Training</span>
+          </div>
+
+          <div class="training__copy">
+            <p class="eyebrow" data-reveal><span class="eyebrow__dot"></span>Training &amp; Betreuung</p>
+            <h2 class="h2" data-reveal-title>Ein Plan, der<br />zu dir passt.</h2>
+            <p class="lead" data-reveal>
+              In Zusammenarbeit mit unseren qualifizierten Trainern werden persönliche Trainings- und
+              Ernährungskonzepte entwickelt.
+            </p>
+
+            <ol class="services">
+              <li class="service" data-reveal>
+                <span class="service__no">01</span>
+                <div>
+                  <h3>Personal Training</h3>
+                  <p>Persönliche Betreuung durch unsere qualifizierten Trainer.</p>
+                </div>
+                <svg class="service__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" /></svg>
+              </li>
+              <li class="service" data-reveal>
+                <span class="service__no">02</span>
+                <div>
+                  <h3>Individuelle Trainingskonzepte</h3>
+                  <p>Dein Trainingskonzept wird gemeinsam mit dir entwickelt.</p>
+                </div>
+                <svg class="service__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" /></svg>
+              </li>
+              <li class="service" data-reveal>
+                <span class="service__no">03</span>
+                <div>
+                  <h3>Ernährungskonzepte</h3>
+                  <p>Persönliche Ernährungskonzepte als Ergänzung zu deinem Training.</p>
+                </div>
+                <svg class="service__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" /></svg>
+              </li>
+              <li class="service" data-reveal>
+                <span class="service__no">04</span>
+                <div>
+                  <h3>Cardio- und Krafttraining</h3>
+                  <p>Trainiere an modernen Geräten für Ausdauer und Kraft.</p>
+                </div>
+                <svg class="service__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" /></svg>
+              </li>
+            </ol>
+
+            <a class="btn btn--line" href="#mitgliedschaft" data-reveal>
+              <span>Jetzt Mitglied werden</span>
+              <svg class="btn__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ AUSSTATTUNG ============ -->
+      <section class="section equipment" id="ausstattung" data-section>
+        <div class="container">
+          <header class="section-head section-head--split">
+            <div>
+              <p class="eyebrow" data-reveal><span class="eyebrow__dot"></span>Ausstattung</p>
+              <h2 class="h2" data-reveal-title>Zwei Bereiche.<br /><span class="text-gold">Ein Ziel: deins.</span></h2>
+            </div>
+            <p class="lead" data-reveal>
+              Unser Studio bietet eine erstklassige, moderne Ausstattung mit Trainingsgeräten für Cardio- und
+              Krafttraining.
+            </p>
+          </header>
+
+          <div class="zones">
+            <article class="zone" data-reveal="clip">
+              <img
+                data-parallax="10"
+                src="/images/studio-cardio-1600.webp"
+                srcset="/images/studio-cardio-800.webp 800w, /images/studio-cardio-1600.webp 1600w"
+                sizes="(min-width: 800px) 110vw, 200vw"
+                width="1600"
+                height="900"
+                loading="lazy"
+                alt="Visualisierung des Cardio-Bereichs"
+              />
+              <div class="zone__body">
+                <span class="zone__no">01</span>
+                <h3 class="zone__title">Cardio</h3>
+                <p>Modern ausgestatteter Cardiobereich für dein Ausdauertraining.</p>
+              </div>
+            </article>
+            <article class="zone zone--offset" data-reveal="clip">
+              <img
+                data-parallax="10"
+                src="/images/studio-kraft-1600.webp"
+                srcset="/images/studio-kraft-800.webp 800w, /images/studio-kraft-1600.webp 1600w"
+                sizes="(min-width: 800px) 110vw, 200vw"
+                width="1600"
+                height="900"
+                loading="lazy"
+                alt="Visualisierung des Kraftbereichs"
+              />
+              <div class="zone__body">
+                <span class="zone__no">02</span>
+                <h3 class="zone__title">Kraft</h3>
+                <p>Modern ausgestatteter Kraftgerätebereich für dein Krafttraining.</p>
+              </div>
+            </article>
+          </div>
+          <p class="note" data-reveal data-placeholder>
+            Detaillierte Geräte- und Ausstattungsliste: Platzhalter – Angaben folgen vom Studio.
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ E. STUDIO-EINBLICKE ============ -->
+      <section class="section studio" id="studio" data-section>
+        <div class="container">
+          <header class="section-head section-head--split">
+            <div>
+              <p class="eyebrow" data-reveal><span class="eyebrow__dot"></span>Unser Studio</p>
+              <h2 class="h2" data-reveal-title>Einblicke ins<br />Memberfit.</h2>
+            </div>
+            <p class="lead" data-reveal>
+              Ein Studio, in dem du dich wohlfühlst: klare Linien, warme Materialien und viel Raum für dein
+              Training.
+            </p>
+          </header>
+
+          <!-- Kacheln werden aus src/config/site.config.js erzeugt (components/gallery.js) -->
+          <div class="gallery" id="gallery"></div>
+          <p class="note" data-reveal>
+            Die Bilder zeigen Visualisierungen des Studios von der bestehenden Website.
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ F. MITGLIEDSCHAFT & ANGEBOT ============ -->
+      <section class="section membership" id="mitgliedschaft" data-section>
+        <div class="membership__bg" aria-hidden="true"></div>
+        <!-- Inhalt wird aus src/config/site.config.js erzeugt (components/offer.js).
+             VORLÄUFIGES ANGEBOT: dort änderbar oder komplett abschaltbar. -->
+        <div class="container" id="offer-root"></div>
+      </section>
+
+      <!-- ============ G. FAQ ============ -->
+      <section class="section faq" id="faq" data-section>
+        <div class="container faq__grid">
+          <header class="faq__head">
+            <p class="eyebrow" data-reveal><span class="eyebrow__dot"></span>FAQ</p>
+            <h2 class="h2" data-reveal-title>Häufig gestellte<br />Fragen.</h2>
+            <p class="lead" data-reveal>Noch etwas offen? Unser Team hilft dir gerne persönlich weiter.</p>
+            <a class="btn btn--line" href="#kontakt" data-reveal>
+              <span>Kontakt aufnehmen</span>
+              <svg class="btn__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </a>
+          </header>
+          <!-- Einträge aus src/config/site.config.js (components/faq.js) -->
+          <div class="accordion" id="faq-root"></div>
+        </div>
+      </section>
+
+      <!-- ============ H. KONTAKT & ABSCHLUSS-CTA ============ -->
+      <section class="section closing" id="kontakt" data-section>
+        <div class="closing__media" aria-hidden="true">
+          <img
+            data-parallax="10"
+            src="/images/studio-lounge-1600.webp"
+            srcset="/images/studio-lounge-800.webp 800w, /images/studio-lounge-1600.webp 1600w"
+            sizes="100vw"
+            width="1600"
+            height="900"
+            loading="lazy"
+            alt=""
+          />
+        </div>
+        <div class="container closing__inner">
+          <p class="eyebrow" data-reveal><span class="eyebrow__dot"></span>Bereit?</p>
+          <h2 class="h1" data-reveal-title>Dein nächster Schritt<br /><span class="text-gold">beginnt hier.</span></h2>
+          <p class="lead" data-reveal>Entdecke Memberfit Plettenberg und starte mit deinem Training.</p>
+          <div class="closing__actions" data-reveal>
+            <a class="btn btn--primary btn--lg" href="#mitgliedschaft">
+              <span>Jetzt Mitglied werden</span>
+              <svg class="btn__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </a>
+            <a class="btn btn--ghost btn--lg" data-contact-mail href="#kontakt-daten"><span>Kontakt aufnehmen</span></a>
+          </div>
+
+          <!-- Kontaktdaten aus src/config/site.config.js (components/contact.js) -->
+          <dl class="contact-cards" id="kontakt-daten"></dl>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ I. FOOTER ============ -->
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div class="footer__brand">
+          <img src="/images/logo-memberfit.webp" width="640" height="379" loading="lazy" alt="MemberFit – Fitness, Gesundheit, Lifestyle" />
+        </div>
+        <nav class="footer__col" aria-label="Footer-Navigation">
+          <h2 class="footer__title">Navigation</h2>
+          <a href="#start">Startseite</a>
+          <a href="#training">Training</a>
+          <a href="#ausstattung">Ausstattung</a>
+          <a href="#studio">Studio</a>
+          <a href="#faq">FAQ</a>
+          <a href="#kontakt">Kontakt</a>
+        </nav>
+        <div class="footer__col">
+          <h2 class="footer__title">Kontakt</h2>
+          <address id="footer-contact"></address>
+        </div>
+        <div class="footer__col">
+          <h2 class="footer__title">Mitgliedschaft</h2>
+          <p>Starte jetzt mit deinem Training bei Memberfit Plettenberg.</p>
+          <a class="btn btn--primary btn--sm" href="#mitgliedschaft"><span>Jetzt Mitglied werden</span></a>
+        </div>
+      </div>
+      <div class="container footer__bottom">
+        <p>© <span id="year">2026</span> Memberfit Plettenberg</p>
+        <nav class="footer__legal" aria-label="Rechtliches">
+          <a data-link="impressum" href="#">Impressum</a>
+          <a data-link="datenschutz" href="#">Datenschutz</a>
+          <a data-link="agb" href="#">AGB</a>
+        </nav>
+      </div>
+    </footer>
+
+    <!-- Lightbox (components/lightbox.js) -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Bildansicht" hidden>
+      <button class="lightbox__close" type="button" data-lb-close aria-label="Schließen">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" /></svg>
+      </button>
+      <button class="lightbox__nav lightbox__nav--prev" type="button" data-lb-prev aria-label="Vorheriges Bild">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" /></svg>
+      </button>
+      <figure class="lightbox__figure">
+        <img class="lightbox__img" alt="" />
+        <figcaption class="lightbox__caption"><span data-lb-caption></span><span data-lb-count></span></figcaption>
+      </figure>
+      <button class="lightbox__nav lightbox__nav--next" type="button" data-lb-next aria-label="Nächstes Bild">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" /></svg>
+      </button>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>

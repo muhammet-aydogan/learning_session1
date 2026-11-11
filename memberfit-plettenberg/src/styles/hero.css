@@ -1,0 +1,196 @@
+.hero {
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding-top: var(--nav-h);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Vor dem Start der Lade-Animation nichts aufblitzen lassen */
+.js:not(.is-ready) .hero__content,
+.js:not(.is-ready) .hero__facts,
+.js:not(.is-ready) .scroll-hint {
+  visibility: hidden;
+}
+
+.hero__media {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+.hero__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 68% 30%;
+  will-change: transform;
+}
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(10, 10, 11, 0.94) 0%, rgba(10, 10, 11, 0.62) 42%, rgba(10, 10, 11, 0.08) 78%),
+    linear-gradient(0deg, var(--bg) 0%, rgba(10, 10, 11, 0) 38%),
+    linear-gradient(180deg, rgba(10, 10, 11, 0.7) 0%, rgba(10, 10, 11, 0) 22%);
+}
+/* Dezenter Lichtakzent in Markenfarbe */
+.hero__glow {
+  position: absolute;
+  right: -10%;
+  top: 8%;
+  width: 60vw;
+  aspect-ratio: 1;
+  background: radial-gradient(closest-side, rgba(var(--gold-rgb), 0.2), transparent 70%);
+  mix-blend-mode: screen;
+  animation: glow-pulse 7s ease-in-out infinite alternate;
+}
+@keyframes glow-pulse {
+  from { opacity: 0.55; transform: scale(0.94); }
+  to { opacity: 1; transform: scale(1.06); }
+}
+
+.hero__content {
+  align-self: center;
+  padding-block: clamp(28px, 5vh, 96px);
+}
+.hero__title {
+  font-size: clamp(2.6rem, min(10vw, 13.5vh), 9rem);
+  line-height: 0.94;
+  margin-bottom: clamp(22px, 3vw, 36px);
+}
+.hero__lead {
+  max-width: 46ch;
+  font-size: clamp(1.02rem, 0.95rem + 0.5vw, 1.28rem);
+  color: rgba(245, 242, 236, 0.82);
+}
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: clamp(28px, 4vw, 44px);
+}
+
+.hero__facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px clamp(24px, 4vw, 56px);
+  padding-block: 26px 30px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(245, 242, 236, 0.72);
+}
+.hero__facts::before {
+  content: '';
+  flex: 0 0 100%;
+  height: 1px;
+  margin-bottom: 14px;
+  background: linear-gradient(90deg, var(--line-strong), transparent 80%);
+}
+.hero__facts li {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.hero__facts li::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--gold);
+  transform: rotate(45deg);
+}
+
+/* Scroll-Indikator */
+.scroll-hint {
+  position: absolute;
+  right: var(--gutter);
+  bottom: 28px;
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+  padding: 8px;
+  color: var(--muted);
+}
+.scroll-hint__label {
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+}
+.scroll-hint__line {
+  position: relative;
+  width: 1px;
+  height: 64px;
+  background: var(--line-strong);
+  overflow: hidden;
+}
+.scroll-hint__line::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--gold);
+  animation: scroll-line 2.2s var(--ease-in-out) infinite;
+}
+@keyframes scroll-line {
+  0% { transform: translateY(-100%); }
+  55% { transform: translateY(0); }
+  100% { transform: translateY(100%); }
+}
+
+/* Desktop: Motiv nach rechts rücken, damit links Raum für die Headline bleibt */
+@media (min-width: 721px) {
+  .hero__img {
+    width: 130%;
+    max-width: none;
+    object-position: 50% 30%;
+  }
+}
+@media (max-width: 720px) {
+  .hero__img {
+    object-position: 66% 20%;
+  }
+  .hero__overlay {
+    background:
+      linear-gradient(0deg, var(--bg) 6%, rgba(10, 10, 11, 0.86) 38%, rgba(10, 10, 11, 0.25) 70%, rgba(10, 10, 11, 0.6) 100%);
+  }
+  .hero__title {
+    font-size: clamp(2.6rem, 11.2vw, 5rem);
+  }
+  .hero__content {
+    align-self: end;
+    padding-block: 24px 28px;
+  }
+  .hero__actions .btn {
+    flex: 1 1 100%;
+  }
+  .hero__facts {
+    display: none;
+  }
+  .scroll-hint {
+    position: static;
+    grid-auto-flow: column;
+    justify-content: start;
+    align-items: center;
+    padding: 0 var(--gutter) 22px;
+  }
+  .scroll-hint__label {
+    writing-mode: horizontal-tb;
+  }
+  .scroll-hint__line {
+    width: 56px;
+    height: 1px;
+  }
+  .scroll-hint__line::after {
+    animation-name: scroll-line-x;
+  }
+}
+@keyframes scroll-line-x {
+  0% { transform: translateX(-100%); }
+  55% { transform: translateX(0); }
+  100% { transform: translateX(100%); }
+}

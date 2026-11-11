@@ -1,0 +1,41 @@
+/* Design-Tokens – Markenfarben aus dem bestehenden Auftritt (Gold #d3a658 auf Schwarz). */
+:root {
+  --bg: #0a0a0b;
+  --bg-2: #101012;
+  --surface: #16161a;
+  --surface-2: #1d1d22;
+  --line: rgba(255, 255, 255, 0.09);
+  --line-strong: rgba(255, 255, 255, 0.18);
+
+  --gold: #d3a658;
+  --gold-light: #ecca8d;
+  --gold-deep: #a47a33;
+  --gold-rgb: 211, 166, 88;
+
+  --text: #f5f2ec;
+  --muted: #a9a49b;
+  --dim: #6f6b64;
+
+  --font-display: 'Oswald', 'Arial Narrow', Impact, sans-serif;
+  --font-body: 'Manrope Variable', 'Manrope', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  --radius: 20px;
+  --radius-lg: 28px;
+  --gutter: clamp(20px, 5vw, 64px);
+  --container: 1320px;
+  --section-y: clamp(84px, 11vw, 168px);
+  --nav-h: 84px;
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --shadow-lg: 0 40px 100px -40px rgba(0, 0, 0, 0.8);
+  --glow: 0 24px 80px -24px rgba(var(--gold-rgb), 0.45);
+}
+
+@media (max-width: 720px) {
+  :root {
+    --nav-h: 68px;
+    --radius: 16px;
+    --radius-lg: 22px;
+  }
+}

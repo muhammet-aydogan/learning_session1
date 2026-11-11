@@ -1,0 +1,147 @@
+.btn {
+  --btn-h: 52px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: var(--btn-h);
+  padding: 0 28px;
+  border-radius: 999px;
+  font-size: 0.86rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  isolation: isolate;
+  transition:
+    transform 0.5s var(--ease-out),
+    box-shadow 0.5s var(--ease-out),
+    border-color 0.4s,
+    color 0.4s;
+}
+.btn:active {
+  transform: scale(0.97);
+}
+.btn--sm {
+  --btn-h: 44px;
+  padding: 0 22px;
+  font-size: 0.76rem;
+}
+.btn--lg {
+  --btn-h: 60px;
+  padding: 0 34px;
+}
+.btn--block {
+  width: 100%;
+}
+
+.btn__arrow {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 0.5s var(--ease-out);
+}
+.btn:hover .btn__arrow {
+  transform: translateX(5px);
+}
+
+/* Primär: Gold mit Lichtreflex beim Hover */
+.btn--primary {
+  color: #100d07;
+  background: linear-gradient(180deg, var(--gold-light), var(--gold) 55%, #c4954a);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.45),
+    0 14px 40px -16px rgba(var(--gold-rgb), 0.7);
+}
+.btn--primary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(105deg, transparent 30%, rgba(255, 255, 255, 0.55) 50%, transparent 70%);
+  transform: translateX(-120%);
+  transition: transform 0.9s var(--ease-out);
+}
+.btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.45),
+    0 22px 56px -16px rgba(var(--gold-rgb), 0.9);
+}
+.btn--primary:hover::before {
+  transform: translateX(120%);
+}
+
+/* Sekundär: Glas-Outline, füllt sich beim Hover */
+.btn--ghost {
+  color: var(--text);
+  border: 1px solid var(--line-strong);
+  background: rgba(255, 255, 255, 0.04);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+.btn--ghost::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--text);
+  transform: translateY(101%);
+  border-radius: inherit;
+  transition: transform 0.55s var(--ease-out);
+}
+.btn--ghost:hover {
+  color: #0a0a0b;
+  border-color: var(--text);
+}
+.btn--ghost:hover::before {
+  transform: none;
+}
+
+/* Text-Link mit animierter Linie */
+.btn--line {
+  min-height: 44px;
+  padding: 0;
+  border-radius: 0;
+  color: var(--gold-light);
+  overflow: visible;
+}
+.btn--line::after {
+  content: '';
+  position: absolute;
+  inset: auto 0 6px;
+  height: 1px;
+  background: currentColor;
+  transform-origin: 100% 50%;
+  transition: transform 0.5s var(--ease-out);
+}
+.btn--line:hover::after {
+  transform: scaleX(0.35);
+  transform-origin: 0 50%;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 0 14px;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.chip--gold {
+  color: #100d07;
+  background: var(--gold);
+}
+.chip--muted {
+  color: var(--muted);
+  border: 1px dashed var(--line-strong);
+}

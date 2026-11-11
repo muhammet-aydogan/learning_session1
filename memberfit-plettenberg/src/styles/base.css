@@ -1,0 +1,288 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-padding-top: var(--nav-h);
+  background: var(--bg);
+}
+
+html.is-locked,
+html.is-locked body {
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 0.96rem + 0.2vw, 1.0625rem);
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+}
+
+img,
+svg,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+ul,
+ol,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+p,
+figure {
+  margin: 0;
+}
+
+address {
+  font-style: normal;
+}
+
+::selection {
+  background: var(--gold);
+  color: #0a0a0b;
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold-light);
+  outline-offset: 4px;
+  border-radius: 6px;
+}
+
+[tabindex='-1']:focus {
+  outline: none;
+}
+
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 200;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: var(--gold);
+  color: #0a0a0b;
+  font-weight: 700;
+  transform: translateY(-200%);
+}
+.skip-link:focus {
+  transform: none;
+}
+
+/* ---------- Layout ---------- */
+.container {
+  width: 100%;
+  max-width: calc(var(--container) + 2 * var(--gutter));
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.section {
+  position: relative;
+  padding-block: var(--section-y);
+}
+
+.section-head {
+  margin-bottom: clamp(40px, 6vw, 88px);
+}
+.section-head--split {
+  display: grid;
+  gap: 24px clamp(32px, 6vw, 96px);
+  align-items: end;
+}
+@media (min-width: 900px) {
+  .section-head--split {
+    grid-template-columns: 1.25fr 1fr;
+  }
+}
+
+/* ---------- Typografie ---------- */
+.h1,
+.h2,
+.hero__title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 0.98;
+  letter-spacing: -0.012em;
+  text-wrap: balance;
+}
+.h1 {
+  font-size: clamp(2.6rem, 8vw, 7rem);
+}
+.h2 {
+  font-size: clamp(2.3rem, 5.6vw, 4.75rem);
+}
+
+/* Maske für zeilenweise Text-Animationen */
+.line {
+  display: block;
+  overflow: hidden;
+  padding-block: 0.06em;
+  margin-block: -0.06em;
+}
+.line > span {
+  display: block;
+  transform-origin: 0 100%;
+  will-change: transform;
+}
+
+.text-gold {
+  color: var(--gold);
+}
+
+.lead {
+  max-width: 54ch;
+  color: var(--muted);
+  font-size: clamp(1.02rem, 0.95rem + 0.4vw, 1.2rem);
+}
+
+.h1 + .lead,
+.h2 + .lead {
+  margin-top: clamp(20px, 2.4vw, 30px);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+}
+.eyebrow__dot {
+  width: 28px;
+  height: 1px;
+  background: var(--gold);
+  box-shadow: 0 0 12px 1px rgba(var(--gold-rgb), 0.8);
+}
+
+.note {
+  margin-top: clamp(28px, 4vw, 48px);
+  font-size: 0.85rem;
+  color: var(--dim);
+}
+
+/* ---------- Platzhalter-Markierung (per Konfiguration abschaltbar) ---------- */
+[data-placeholder] {
+  color: var(--muted);
+}
+.show-placeholders span[data-placeholder],
+.show-placeholders p[data-placeholder] {
+  display: inline-block;
+  padding: 3px 12px;
+  border: 1px dashed rgba(var(--gold-rgb), 0.55);
+  border-radius: 8px;
+  color: var(--gold-light);
+  font-size: 0.86em;
+  background: rgba(var(--gold-rgb), 0.06);
+}
+
+/* ---------- Scroll-Fortschritt ---------- */
+.scroll-progress {
+  position: fixed;
+  inset: 0 0 auto;
+  height: 2px;
+  z-index: 120;
+  pointer-events: none;
+}
+.scroll-progress span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, var(--gold-deep), var(--gold-light));
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+}
+
+/* ---------- Parallax-Bilder: füllen ihren Rahmen mit Reserve ---------- */
+[data-parallax] {
+  position: absolute;
+  inset: -15% 0 auto;
+  width: 100%;
+  height: 130%;
+  object-fit: cover;
+  will-change: transform;
+}
+
+/* ---------- Laufband ---------- */
+.marquee {
+  overflow: hidden;
+  border-block: 1px solid var(--line);
+  padding-block: clamp(16px, 2.2vw, 28px);
+  background: var(--bg-2);
+}
+.marquee__track {
+  display: flex;
+  align-items: center;
+  gap: clamp(24px, 4vw, 56px);
+  width: max-content;
+  padding-right: clamp(24px, 4vw, 56px);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.5rem, 3.4vw, 2.75rem);
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  will-change: transform;
+}
+.marquee__track .is-outline {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(var(--gold-rgb), 0.75);
+}
+.marquee__track i {
+  width: 10px;
+  height: 10px;
+  background: var(--gold);
+  transform: rotate(45deg);
+  flex: none;
+}
+
+/* ---------- Reduzierte Bewegung ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

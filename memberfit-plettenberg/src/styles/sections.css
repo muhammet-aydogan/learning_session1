@@ -1,0 +1,522 @@
+/* ============ C. VORTEILE ============ */
+.usp-grid {
+  display: grid;
+  border-top: 1px solid var(--line);
+}
+.usp {
+  position: relative;
+  display: grid;
+  align-content: start;
+  gap: 14px;
+  padding: clamp(28px, 3vw, 44px) clamp(20px, 2.4vw, 36px) clamp(32px, 3.4vw, 52px);
+  border-bottom: 1px solid var(--line);
+  overflow: hidden;
+  isolation: isolate;
+  transition: background-color 0.5s;
+}
+/* Goldene Linie, die beim Hover einfährt */
+.usp::before {
+  content: '';
+  position: absolute;
+  inset: -1px 0 auto;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-light));
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition: transform 0.7s var(--ease-out);
+}
+/* Lichtkegel folgt dem Mauszeiger */
+.usp::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(340px circle at var(--mx, 50%) var(--my, 0%), rgba(var(--gold-rgb), 0.13), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.usp:hover::before {
+  transform: scaleX(1);
+}
+.usp:hover::after {
+  opacity: 1;
+}
+
+.usp__no {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  color: var(--dim);
+  transition: color 0.4s;
+}
+.usp:hover .usp__no {
+  color: var(--gold);
+}
+.usp__icon {
+  width: 64px;
+  height: 64px;
+  margin-block: clamp(12px, 3vw, 40px) 10px;
+  fill: none;
+  stroke: var(--text);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 0.7s var(--ease-out);
+}
+.usp__icon .accent {
+  stroke: var(--gold);
+}
+.usp:hover .usp__icon {
+  transform: translateY(-6px) scale(1.06);
+}
+.usp:hover .usp__icon--lift {
+  transform: translateY(-6px) rotate(-10deg) scale(1.06);
+}
+.usp:hover .usp__icon--drink .accent {
+  animation: wave 1.2s ease-in-out infinite alternate;
+}
+@keyframes wave {
+  to { transform: translateY(-5px); }
+}
+.usp__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 1.1rem + 1vw, 1.8rem);
+  font-weight: 600;
+  line-height: 1.12;
+  text-transform: uppercase;
+  -webkit-hyphens: manual;
+  hyphens: manual;
+}
+.usp__text {
+  color: var(--muted);
+  font-size: 0.97rem;
+}
+
+@media (min-width: 640px) {
+  .usp-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .usp:nth-child(odd) {
+    border-right: 1px solid var(--line);
+  }
+}
+@media (min-width: 1080px) {
+  .usp-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .usp:not(:last-child) {
+    border-right: 1px solid var(--line);
+  }
+}
+@media (max-width: 639px) {
+  .usp {
+    grid-template-columns: 56px 1fr;
+    column-gap: 20px;
+    row-gap: 6px;
+    padding-inline: 4px;
+  }
+  .usp__no {
+    grid-column: 1 / -1;
+  }
+  .usp__icon {
+    grid-row: 2 / span 2;
+    width: 52px;
+    height: 52px;
+    margin: 4px 0 0;
+  }
+}
+
+/* ============ D. TRAINING ============ */
+.training {
+  background: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 30%, var(--bg-2) 70%, var(--bg) 100%);
+  overflow: hidden;
+}
+.training__grid {
+  display: grid;
+  gap: clamp(56px, 7vw, 112px);
+  align-items: center;
+}
+.training__visual {
+  position: relative;
+  isolation: isolate;
+}
+/* versetzter Goldrahmen */
+.training__visual::before {
+  content: '';
+  position: absolute;
+  inset: 28px -18px -18px 28px;
+  z-index: -1;
+  border: 1px solid rgba(var(--gold-rgb), 0.5);
+  border-radius: var(--radius-lg);
+}
+.training__photo {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--surface);
+  box-shadow: var(--shadow-lg);
+}
+.training__photo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(10, 10, 11, 0.55), transparent 45%);
+}
+.training__badge {
+  position: absolute;
+  right: -10px;
+  bottom: 36px;
+  display: grid;
+  gap: 4px;
+  max-width: 250px;
+  padding: 20px 24px;
+  border: 1px solid rgba(var(--gold-rgb), 0.35);
+  border-radius: var(--radius);
+  background: rgba(16, 16, 18, 0.72);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  box-shadow: var(--glow);
+  font-size: 0.86rem;
+  line-height: 1.45;
+  color: var(--muted);
+}
+.training__badge strong {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.training__word {
+  position: absolute;
+  left: -0.06em;
+  top: -0.62em;
+  z-index: -2;
+  font-family: var(--font-display);
+  font-size: clamp(5rem, 15vw, 13rem);
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+  user-select: none;
+}
+
+.services {
+  margin-block: clamp(28px, 4vw, 44px);
+  border-top: 1px solid var(--line);
+}
+.service {
+  position: relative;
+  display: grid;
+  grid-template-columns: 44px 1fr 28px;
+  align-items: center;
+  gap: 8px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--line);
+}
+.service > * {
+  transition:
+    transform 0.55s var(--ease-out),
+    color 0.4s;
+}
+.service__no {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+}
+.service h3 {
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 1rem + 0.9vw, 1.6rem);
+  font-weight: 600;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+.service p {
+  margin-top: 4px;
+  font-size: 0.93rem;
+  color: var(--muted);
+}
+.service__arrow {
+  width: 26px;
+  height: 26px;
+  fill: none;
+  stroke: var(--dim);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.service:hover > div {
+  transform: translateX(10px);
+}
+.service:hover h3 {
+  color: var(--gold-light);
+}
+.service:hover .service__arrow {
+  stroke: var(--gold);
+  transform: translate(3px, -3px);
+}
+
+@media (min-width: 1000px) {
+  .training__grid {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  }
+  .training__badge {
+    right: -36px;
+  }
+}
+@media (max-width: 999px) {
+  .training__photo {
+    aspect-ratio: 5 / 4;
+  }
+  .training__visual {
+    margin: 0 18px 44px 0;
+  }
+  .training__badge {
+    right: -18px;
+    bottom: -44px;
+    max-width: 220px;
+    padding: 16px 18px;
+  }
+  .training__badge strong {
+    font-size: 1.35rem;
+  }
+}
+
+/* ============ AUSSTATTUNG ============ */
+.zones {
+  display: grid;
+  gap: clamp(20px, 3vw, 40px);
+}
+.zone {
+  position: relative;
+  aspect-ratio: 5 / 4.4;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--surface);
+  isolation: isolate;
+}
+.zone img {
+  transition: scale 1.2s var(--ease-out);
+}
+.zone:hover img {
+  scale: 1.06;
+}
+.zone::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(10, 10, 11, 0.96) 0%, rgba(10, 10, 11, 0.5) 50%, rgba(10, 10, 11, 0.25) 100%);
+}
+.zone__body {
+  position: absolute;
+  inset: auto 0 0;
+  z-index: 1;
+  padding: clamp(22px, 3vw, 44px);
+}
+.zone__body p {
+  max-width: 36ch;
+  color: rgba(245, 242, 236, 0.78);
+}
+.zone__no {
+  font-family: var(--font-display);
+  letter-spacing: 0.12em;
+  color: var(--gold);
+}
+.zone__title {
+  font-family: var(--font-display);
+  font-size: clamp(3.2rem, 8vw, 7rem);
+  font-weight: 600;
+  line-height: 0.95;
+  text-transform: uppercase;
+  margin-block: 4px 12px;
+  transition: letter-spacing 0.8s var(--ease-out);
+}
+.zone:hover .zone__title {
+  letter-spacing: 0.03em;
+}
+@media (min-width: 800px) {
+  .zones {
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: clamp(48px, 6vw, 88px);
+  }
+  .zone--offset {
+    translate: 0 clamp(48px, 6vw, 88px);
+  }
+}
+@media (max-width: 799px) {
+  .zone {
+    aspect-ratio: 4 / 3.6;
+  }
+}
+
+/* ============ E. STUDIO-GALERIE ============ */
+.studio {
+  background: var(--bg-2);
+}
+.gallery {
+  display: grid;
+  gap: clamp(10px, 1.4vw, 20px);
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: clamp(150px, 19vw, 290px);
+  grid-auto-flow: dense;
+}
+.tile {
+  position: relative;
+  display: block;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--surface);
+  cursor: zoom-in;
+  isolation: isolate;
+}
+.tile--wide {
+  grid-column: span 7;
+  grid-row: span 2;
+}
+.tile--std {
+  grid-column: span 5;
+}
+.tile--tall {
+  grid-column: span 5;
+  grid-row: span 2;
+}
+.tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition:
+    transform 1.1s var(--ease-out),
+    filter 0.6s;
+}
+.tile::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(10, 10, 11, 0.75), transparent 45%);
+  opacity: 0.55;
+  transition: opacity 0.5s;
+}
+.tile:hover img,
+.tile:focus-visible img {
+  transform: scale(1.07);
+}
+.tile:hover::after {
+  opacity: 1;
+}
+.tile__caption {
+  position: absolute;
+  left: 20px;
+  bottom: 16px;
+  z-index: 1;
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: transform 0.6s var(--ease-out);
+}
+.tile__caption em {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--gold);
+}
+.tile:hover .tile__caption {
+  transform: translateY(-6px);
+}
+.tile__zoom {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--gold);
+  color: #100d07;
+  opacity: 0;
+  transform: scale(0.6) rotate(-30deg);
+  transition:
+    opacity 0.4s,
+    transform 0.6s var(--ease-out);
+}
+.tile__zoom svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.tile:hover .tile__zoom,
+.tile:focus-visible .tile__zoom {
+  opacity: 1;
+  transform: none;
+}
+/* Fallback, falls ein Bild nicht lädt */
+.tile.is-broken img {
+  display: none;
+}
+.tile.is-broken {
+  background: repeating-linear-gradient(135deg, var(--surface) 0 14px, var(--surface-2) 14px 28px);
+}
+
+@media (max-width: 899px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: clamp(140px, 30vw, 240px);
+  }
+  .tile--wide {
+    grid-column: span 2;
+  }
+  .tile--std,
+  .tile--tall {
+    grid-column: span 1;
+  }
+  .tile--std {
+    grid-row: span 2;
+  }
+}
+@media (max-width: 519px) {
+  .gallery {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+  }
+  .tile,
+  .tile--wide,
+  .tile--std,
+  .tile--tall {
+    grid-column: auto;
+    grid-row: auto;
+    aspect-ratio: 4 / 3;
+  }
+  .tile--tall {
+    aspect-ratio: 4 / 4.6;
+  }
+}
+@media (hover: none) {
+  .tile__zoom {
+    opacity: 1;
+    transform: none;
+    width: 38px;
+    height: 38px;
+    background: rgba(10, 10, 11, 0.6);
+    color: var(--text);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+  }
+}
