@@ -18,6 +18,13 @@ npm run build      # Produktions-Build nach dist/
 npm run preview    # Build lokal ansehen → http://localhost:4173
 ```
 
+## Veröffentlichung (GitHub Pages)
+
+Live-Vorschau: <https://muhammet-aydogan.github.io/learning_session1/>
+
+Jeder Push auf `main` baut das Projekt und veröffentlicht `dist/` über den Workflow
+`.github/workflows/deploy.yml`. Voraussetzung im Repository: Settings → Pages → Source „GitHub Actions".
+
 ## Technik
 
 | Baustein | Zweck |
