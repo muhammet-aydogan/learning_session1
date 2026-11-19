@@ -1,0 +1,12 @@
+node_modules
+dist
+.DS_Store
+*.log
+
+# Generierte Seiten (Quelle: src/templates + src/data)
+/index.html
+/mettmann/
+/herne/
+/erkrath/
+/luedenscheid/
+/plettenberg/

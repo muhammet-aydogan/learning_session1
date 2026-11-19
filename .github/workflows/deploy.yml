@@ -21,19 +21,19 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: memberfit-plettenberg
+        working-directory: memberfit
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
-          cache-dependency-path: memberfit-plettenberg/package-lock.json
+          cache-dependency-path: memberfit/package-lock.json
       - run: npm ci
       - run: npm run build
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: memberfit-plettenberg/dist
+          path: memberfit/dist
 
   deploy:
     needs: build

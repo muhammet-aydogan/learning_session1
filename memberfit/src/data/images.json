@@ -1,0 +1,386 @@
+{
+ "brand/logo-memberfit.webp": [
+  640,
+  379
+ ],
+ "brand/logo-mf.webp": [
+  640,
+  400
+ ],
+ "erkrath/geraete-1200.webp": [
+  1080,
+  1080
+ ],
+ "erkrath/geraete-640.webp": [
+  640,
+  640
+ ],
+ "erkrath/hero-1920.webp": [
+  1448,
+  1086
+ ],
+ "erkrath/hero-960.webp": [
+  960,
+  720
+ ],
+ "erkrath/hyrox-1200.webp": [
+  1080,
+  1080
+ ],
+ "erkrath/hyrox-640.webp": [
+  640,
+  640
+ ],
+ "erkrath/neueroeffnung-1600.webp": [
+  1600,
+  900
+ ],
+ "erkrath/neueroeffnung-800.webp": [
+  800,
+  450
+ ],
+ "erkrath/studio-1-1600.webp": [
+  1448,
+  1086
+ ],
+ "erkrath/studio-1-800.webp": [
+  800,
+  600
+ ],
+ "erkrath/studio-2-1600.webp": [
+  1448,
+  1086
+ ],
+ "erkrath/studio-2-800.webp": [
+  800,
+  600
+ ],
+ "erkrath/studio-3-1600.webp": [
+  1448,
+  1086
+ ],
+ "erkrath/studio-3-800.webp": [
+  800,
+  600
+ ],
+ "erkrath/studio-4-1600.webp": [
+  1448,
+  1086
+ ],
+ "erkrath/studio-4-800.webp": [
+  800,
+  600
+ ],
+ "herne/hero-1920.webp": [
+  1672,
+  941
+ ],
+ "herne/hero-960.webp": [
+  960,
+  540
+ ],
+ "herne/studio-1-1600.webp": [
+  1080,
+  1080
+ ],
+ "herne/studio-1-800.webp": [
+  800,
+  800
+ ],
+ "herne/studio-2-1600.webp": [
+  1080,
+  1080
+ ],
+ "herne/studio-2-800.webp": [
+  800,
+  800
+ ],
+ "herne/studio-3-1600.webp": [
+  1080,
+  1080
+ ],
+ "herne/studio-3-800.webp": [
+  800,
+  800
+ ],
+ "herne/studio-4-1600.webp": [
+  1080,
+  1080
+ ],
+ "herne/studio-4-800.webp": [
+  800,
+  800
+ ],
+ "herne/studio-5-1600.webp": [
+  1080,
+  1080
+ ],
+ "herne/studio-5-800.webp": [
+  800,
+  800
+ ],
+ "herne/studio-6-1600.webp": [
+  1080,
+  1080
+ ],
+ "herne/studio-6-800.webp": [
+  800,
+  800
+ ],
+ "landing/hero-1920.webp": [
+  1920,
+  1080
+ ],
+ "landing/hero-960.webp": [
+  960,
+  540
+ ],
+ "landing/impression-1-700.webp": [
+  700,
+  700
+ ],
+ "landing/impression-2-700.webp": [
+  700,
+  700
+ ],
+ "landing/impression-3-700.webp": [
+  700,
+  700
+ ],
+ "landing/impression-4-700.webp": [
+  700,
+  700
+ ],
+ "landing/impression-5-700.webp": [
+  700,
+  700
+ ],
+ "landing/impression-6-700.webp": [
+  700,
+  700
+ ],
+ "landing/start-1200.webp": [
+  1200,
+  675
+ ],
+ "landing/start-640.webp": [
+  640,
+  360
+ ],
+ "luedenscheid/hero-1920.webp": [
+  1616,
+  1080
+ ],
+ "luedenscheid/hero-960.webp": [
+  960,
+  642
+ ],
+ "luedenscheid/studio-1-1600.webp": [
+  1080,
+  1616
+ ],
+ "luedenscheid/studio-1-800.webp": [
+  800,
+  1197
+ ],
+ "luedenscheid/studio-2-1600.webp": [
+  1080,
+  1616
+ ],
+ "luedenscheid/studio-2-800.webp": [
+  800,
+  1197
+ ],
+ "luedenscheid/studio-3-1600.webp": [
+  1600,
+  1069
+ ],
+ "luedenscheid/studio-3-800.webp": [
+  800,
+  535
+ ],
+ "luedenscheid/studio-4-1600.webp": [
+  1600,
+  1069
+ ],
+ "luedenscheid/studio-4-800.webp": [
+  800,
+  535
+ ],
+ "luedenscheid/studio-5-1600.webp": [
+  1600,
+  1069
+ ],
+ "luedenscheid/studio-5-800.webp": [
+  800,
+  535
+ ],
+ "luedenscheid/studio-6-1600.webp": [
+  1600,
+  1069
+ ],
+ "luedenscheid/studio-6-800.webp": [
+  800,
+  535
+ ],
+ "luedenscheid/studio-7-1600.webp": [
+  1600,
+  1069
+ ],
+ "luedenscheid/studio-7-800.webp": [
+  800,
+  535
+ ],
+ "mettmann/hero-1920.webp": [
+  1920,
+  1080
+ ],
+ "mettmann/hero-960.webp": [
+  960,
+  540
+ ],
+ "mettmann/studio-1-1600.webp": [
+  1600,
+  900
+ ],
+ "mettmann/studio-1-800.webp": [
+  800,
+  450
+ ],
+ "mettmann/studio-2-1600.webp": [
+  1600,
+  900
+ ],
+ "mettmann/studio-2-800.webp": [
+  800,
+  450
+ ],
+ "mettmann/studio-3-1600.webp": [
+  1600,
+  900
+ ],
+ "mettmann/studio-3-800.webp": [
+  800,
+  450
+ ],
+ "plettenberg/athlet-freisteller-500.webp": [
+  500,
+  919
+ ],
+ "plettenberg/athlet-freisteller-900.webp": [
+  900,
+  1654
+ ],
+ "plettenberg/hero-athletin-1920.webp": [
+  1920,
+  1080
+ ],
+ "plettenberg/hero-athletin-960.webp": [
+  960,
+  540
+ ],
+ "plettenberg/solarium-1200.webp": [
+  1200,
+  800
+ ],
+ "plettenberg/solarium-640.webp": [
+  640,
+  426
+ ],
+ "plettenberg/studio-1-1600.webp": [
+  1600,
+  2000
+ ],
+ "plettenberg/studio-1-800.webp": [
+  800,
+  1000
+ ],
+ "plettenberg/studio-2-1600.webp": [
+  1600,
+  2000
+ ],
+ "plettenberg/studio-2-800.webp": [
+  800,
+  1000
+ ],
+ "plettenberg/studio-3-1600.webp": [
+  1600,
+  2000
+ ],
+ "plettenberg/studio-3-800.webp": [
+  800,
+  1000
+ ],
+ "plettenberg/studio-4-1600.webp": [
+  1600,
+  2000
+ ],
+ "plettenberg/studio-4-800.webp": [
+  800,
+  1000
+ ],
+ "plettenberg/studio-5-1600.webp": [
+  1600,
+  2000
+ ],
+ "plettenberg/studio-5-800.webp": [
+  800,
+  1000
+ ],
+ "plettenberg/studio-6-1600.webp": [
+  1600,
+  2000
+ ],
+ "plettenberg/studio-6-800.webp": [
+  800,
+  1000
+ ],
+ "plettenberg/training-kabelzug-1600.webp": [
+  1600,
+  900
+ ],
+ "plettenberg/training-kabelzug-800.webp": [
+  800,
+  450
+ ],
+ "shared/empfehlung-1200.webp": [
+  1080,
+  1080
+ ],
+ "shared/empfehlung-640.webp": [
+  640,
+  640
+ ],
+ "shared/kurse-1200.webp": [
+  1200,
+  800
+ ],
+ "shared/kurse-640.webp": [
+  640,
+  427
+ ],
+ "shared/solarium-1200.webp": [
+  1080,
+  1080
+ ],
+ "shared/solarium-640.webp": [
+  640,
+  640
+ ],
+ "shared/team-1200.webp": [
+  1000,
+  1000
+ ],
+ "shared/team-640.webp": [
+  640,
+  640
+ ],
+ "shared/trainingsplan-1200.webp": [
+  1080,
+  1080
+ ],
+ "shared/trainingsplan-640.webp": [
+  640,
+  640
+ ]
+}
