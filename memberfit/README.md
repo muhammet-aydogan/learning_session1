@@ -34,6 +34,23 @@ Jeder Push auf `main` baut das Projekt und veröffentlicht `dist/` über den Wor
 `.github/workflows/deploy.yml`. Voraussetzung im Repository: Settings → Pages → Source „GitHub Actions".
 Alle Pfade sind relativ, die Seite funktioniert deshalb auch unter einem Unterpfad.
 
+**Helles Farbschema (Vorschau):** Der Branch `claude/memberfit-helles-farbschema` wird parallel unter
+<https://muhammet-aydogan.github.io/learning_session1/hell/> veröffentlicht. Ein Push auf diesen Branch
+startet über `.github/workflows/preview-trigger.yml` automatisch einen neuen Deploy-Lauf auf `main`;
+die Hauptseite bleibt dabei unverändert.
+
+## Farbschema
+
+Alle Farben sind Design-Tokens in `src/styles/tokens.css`:
+
+- **Hell als Standard** – Weiß und warmes Off-White/Creme als Flächen, Text in dunklem Warm-Braun.
+- **Akzent** – warmes Gelbgold (`--gold`) für Buttons, Flächen und Linien. Als Textfarbe auf hellem Grund
+  werden dunklere Töne verwendet, damit der Kontrast reicht: `--gold-display` für große Überschriften
+  (≥ 3:1), `--gold-ink` für kleine Texte (≥ 4,5:1).
+- **Dunkle Bereiche** – Hero, Abschluss-CTA, Footer, Lightbox sowie Bildkacheln nutzen einen dunklen
+  Warm-Braun-Kontext. Der Selektorblock in `tokens.css` überschreibt dort lokal die Tokens; die Bausteine
+  selbst bleiben unverändert. Ein beliebiger Bereich lässt sich mit der Klasse `theme-dark` dunkel schalten.
+
 ## So ist das Projekt aufgebaut
 
 Die HTML-Seiten werden **beim Start bzw. Build aus Vorlagen und Daten erzeugt**. Eine Studioseite gibt es

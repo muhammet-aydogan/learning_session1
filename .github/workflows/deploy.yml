@@ -1,11 +1,21 @@
-# Baut den Memberfit-Entwurf und veröffentlicht ihn auf GitHub Pages.
+# Baut den MemberFit-Entwurf und veröffentlicht ihn auf GitHub Pages.
 # Voraussetzung (einmalig): Settings → Pages → Source: "GitHub Actions".
+#
+# Veröffentlicht werden zwei Versionen nebeneinander:
+#   /        → Stand von main
+#   /hell/   → Stand des Branches PREVIEW_BRANCH (helles Farbschema), falls vorhanden
+#
+# Ein Push auf PREVIEW_BRANCH startet über den Workflow „Vorschau helles Farbschema"
+# (workflow_run) automatisch einen neuen Lauf dieses Workflows auf main.
 name: Deploy to GitHub Pages
 
 on:
   push:
     branches: [main]
   workflow_dispatch:
+  workflow_run:
+    workflows: ['Vorschau helles Farbschema']
+    types: [completed]
 
 permissions:
   contents: read
@@ -16,21 +26,52 @@ concurrency:
   group: pages
   cancel-in-progress: true
 
+env:
+  PREVIEW_BRANCH: claude/memberfit-helles-farbschema
+  PREVIEW_PATH: hell
+
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: memberfit
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
           cache-dependency-path: memberfit/package-lock.json
-      - run: npm ci
-      - run: npm run build
+
+      - name: Build main
+        working-directory: memberfit
+        run: |
+          npm ci
+          npm run build
+
+      - name: Check preview branch
+        id: preview
+        run: |
+          if git ls-remote --exit-code --heads origin "$PREVIEW_BRANCH" > /dev/null; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.preview.outputs.exists == 'true'
+        with:
+          ref: ${{ env.PREVIEW_BRANCH }}
+          path: preview
+
+      - name: Build preview into /${{ env.PREVIEW_PATH }}/
+        if: steps.preview.outputs.exists == 'true'
+        working-directory: preview/memberfit
+        run: |
+          npm ci
+          npm run build
+          cp -r dist "$GITHUB_WORKSPACE/memberfit/dist/$PREVIEW_PATH"
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: memberfit/dist

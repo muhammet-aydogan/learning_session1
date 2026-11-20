@@ -1,20 +1,41 @@
-/* Design-Tokens – Markenfarben aus dem bestehenden Auftritt (Gold #d3a658 auf Schwarz). */
+/* =================================================================
+   Design-Tokens – helles Farbschema
+   Richtung nach Kundenreferenz: Weiß und warmes Creme als Grundton,
+   kräftiges, warmes Gelbgold als Akzent, dunkles Warm-Braun statt
+   Schwarz für gezielte dunkle Flächen (Hero, Mitgliedschaft, Footer).
+   ================================================================= */
 :root {
-  --bg: #0a0a0b;
-  --bg-2: #101012;
-  --surface: #16161a;
-  --surface-2: #1d1d22;
-  --line: rgba(255, 255, 255, 0.09);
-  --line-strong: rgba(255, 255, 255, 0.18);
+  /* Flächen */
+  --bg: #ffffff;
+  --bg-2: #fbf8f1; /* warmes Off-White */
+  --bg-3: #fff7e2; /* Creme mit Goldstich */
+  --surface: #ffffff;
+  --surface-2: #f5efe2;
+  --fill: rgba(19, 12, 0, 0.03);
+  --glass: rgba(255, 255, 255, 0.82);
+  --panel: rgba(255, 255, 255, 0.98);
+  --line: rgba(19, 12, 0, 0.1);
+  --line-strong: rgba(19, 12, 0, 0.18);
 
-  --gold: #d3a658;
-  --gold-light: #ecca8d;
-  --gold-deep: #a47a33;
-  --gold-rgb: 211, 166, 88;
+  /* Akzent */
+  --gold: #f5b41f;
+  --gold-light: #ffd15c;
+  --gold-deep: #d99a0b;
+  --gold-rgb: 245, 180, 31;
+  --gold-ink: #8f6206; /* Gold als Textfarbe auf hellem Grund (Kontrast ≥ 4,5:1) */
+  --gold-display: #b88200; /* Gold für große Überschriften auf hellem Grund (≥ 3:1) */
+  --on-gold: #1a1305; /* Text auf goldenen Flächen */
+  --card-accent-a: #fff6dc;
+  --card-accent-b: #ffffff;
 
-  --text: #f5f2ec;
-  --muted: #a9a49b;
-  --dim: #6f6b64;
+  /* Text */
+  --text: #1a1305;
+  --muted: #625b52;
+  --dim: #776f65;
+
+  /* Dunkles Warm-Braun für dunkle Bereiche und Bild-Overlays */
+  --ink: #130c00;
+  --ink-rgb: 19, 12, 0;
 
   --font-display: 'Oswald', 'Arial Narrow', Impact, sans-serif;
   --font-body: 'Manrope Variable', 'Manrope', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
@@ -28,8 +49,58 @@
 
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
-  --shadow-lg: 0 40px 100px -40px rgba(0, 0, 0, 0.8);
-  --glow: 0 24px 80px -24px rgba(var(--gold-rgb), 0.45);
+  --shadow-sm: 0 12px 32px -18px rgba(19, 12, 0, 0.22);
+  --shadow-lg: 0 34px 80px -40px rgba(19, 12, 0, 0.35);
+  --glow: 0 24px 70px -26px rgba(var(--gold-rgb), 0.6);
+}
+
+/* -----------------------------------------------------------------
+   Dunkler Kontext: Bereiche auf Fotos oder bewusst dunkle Flächen.
+   Die Tokens werden lokal überschrieben – die Bausteine selbst bleiben gleich.
+   ----------------------------------------------------------------- */
+.theme-dark,
+.hero,
+.closing,
+.footer,
+.lightbox,
+.toast,
+.tile,
+.zone,
+.studio-preview,
+.steps__visual,
+.nav:not(.is-scrolled) {
+  --bg: #130c00;
+  --bg-2: #1b1307;
+  --bg-3: #22180a;
+  --surface: #211809;
+  --surface-2: #2b200f;
+  --fill: rgba(255, 255, 255, 0.04);
+  --glass: rgba(27, 19, 7, 0.62);
+  --panel: rgba(27, 19, 7, 0.97);
+  --line: rgba(255, 245, 225, 0.12);
+  --line-strong: rgba(255, 245, 225, 0.24);
+  --gold-ink: var(--gold-light);
+  --gold-display: var(--gold);
+  --card-accent-a: rgba(70, 50, 12, 0.95);
+  --card-accent-b: rgba(27, 19, 7, 0.97);
+  --text: #fffaf0;
+  --muted: #d2c8b8;
+  --dim: #a0968a;
+  --shadow-lg: 0 40px 100px -40px rgba(0, 0, 0, 0.75);
+  color: var(--text);
+}
+
+/* Mobiles Menü offen: Navigation liegt auf hellem Grund */
+.menu-open .nav {
+  --bg: #ffffff;
+  --line: rgba(19, 12, 0, 0.1);
+  --line-strong: rgba(19, 12, 0, 0.18);
+  --gold-ink: #8f6206;
+  --gold-display: #b88200;
+  --text: #1a1305;
+  --muted: #625b52;
+  --panel: rgba(255, 255, 255, 0.98);
+  color: var(--text);
 }
 
 @media (max-width: 720px) {

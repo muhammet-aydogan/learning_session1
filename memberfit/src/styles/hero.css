@@ -32,9 +32,9 @@
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(10, 10, 11, 0.94) 0%, rgba(10, 10, 11, 0.62) 42%, rgba(10, 10, 11, 0.08) 78%),
-    linear-gradient(0deg, var(--bg) 0%, rgba(10, 10, 11, 0) 38%),
-    linear-gradient(180deg, rgba(10, 10, 11, 0.7) 0%, rgba(10, 10, 11, 0) 22%);
+    linear-gradient(90deg, rgba(var(--ink-rgb), 0.94) 0%, rgba(var(--ink-rgb), 0.62) 42%, rgba(var(--ink-rgb), 0.08) 78%),
+    linear-gradient(0deg, var(--bg) 0%, rgba(var(--ink-rgb), 0) 38%),
+    linear-gradient(180deg, rgba(var(--ink-rgb), 0.7) 0%, rgba(var(--ink-rgb), 0) 22%);
 }
 /* Dezenter Lichtakzent in Markenfarbe */
 .hero__glow {
@@ -156,7 +156,7 @@
   }
   .hero__overlay {
     background:
-      linear-gradient(0deg, var(--bg) 6%, rgba(10, 10, 11, 0.86) 38%, rgba(10, 10, 11, 0.25) 70%, rgba(10, 10, 11, 0.6) 100%);
+      linear-gradient(0deg, var(--bg) 6%, rgba(var(--ink-rgb), 0.86) 38%, rgba(var(--ink-rgb), 0.25) 70%, rgba(var(--ink-rgb), 0.6) 100%);
   }
   .hero__title {
     font-size: clamp(2.6rem, 11.2vw, 5rem);

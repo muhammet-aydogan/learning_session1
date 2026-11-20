@@ -38,13 +38,13 @@
   letter-spacing: 0.14em;
   line-height: 1;
   text-transform: uppercase;
-  color: var(--gold-light);
+  color: var(--gold-ink);
   vertical-align: middle;
 }
 .tag--gold {
-  border-color: var(--gold);
+  border-color: var(--gold-ink);
   background: var(--gold);
-  color: #100d07;
+  color: var(--on-gold);
 }
 .eyebrow .tag {
   margin-left: 6px;
@@ -66,7 +66,7 @@
   padding: 0 22px 0 26px;
   border: 1px solid var(--line-strong);
   border-radius: 999px;
-  background: rgba(18, 18, 20, 0.6);
+  background: var(--glass);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   font-family: var(--font-display);
@@ -84,9 +84,9 @@
   transition: transform 0.5s var(--ease-out);
 }
 .studio-chip:hover {
-  border-color: var(--gold);
+  border-color: var(--gold-ink);
   background: var(--gold);
-  color: #100d07;
+  color: var(--on-gold);
   transform: translateY(-3px);
 }
 .studio-chip:hover .ico {
@@ -97,7 +97,7 @@
   color: var(--muted);
 }
 .closing__mail a {
-  color: var(--gold-light);
+  color: var(--gold-ink);
   border-bottom: 1px solid rgba(var(--gold-rgb), 0.4);
 }
 
@@ -125,10 +125,10 @@
 }
 .switcher__btn:hover,
 .switcher.is-open .switcher__btn {
-  border-color: var(--gold);
+  border-color: var(--gold-ink);
 }
 .switcher__pin {
-  color: var(--gold);
+  color: var(--gold-ink);
   width: 16px;
   height: 16px;
 }
@@ -148,7 +148,7 @@
   padding: 10px;
   border: 1px solid var(--line-strong);
   border-radius: var(--radius);
-  background: rgba(16, 16, 18, 0.96);
+  background: var(--panel);
   -webkit-backdrop-filter: blur(18px);
   backdrop-filter: blur(18px);
   box-shadow: var(--shadow-lg);
@@ -202,18 +202,18 @@
   padding: 3px 8px;
   border-radius: 999px;
   background: var(--gold);
-  color: #100d07;
+  color: var(--on-gold);
 }
 .switcher__panel a:hover {
-  background: rgba(255, 255, 255, 0.06);
-  color: var(--gold-light);
+  background: rgba(var(--gold-rgb), 0.14);
+  color: var(--gold-ink);
 }
 .switcher__panel a:hover .ico {
   opacity: 1;
   transform: translate(2px, -2px);
 }
 .switcher__panel a[aria-current='page'] {
-  color: var(--gold);
+  color: var(--gold-ink);
 }
 .switcher__panel .switcher__all {
   margin-top: 6px;
@@ -265,8 +265,8 @@
   font-size: 0.9rem;
 }
 .chip-link.is-current {
-  border-color: var(--gold);
-  color: var(--gold);
+  border-color: var(--gold-ink);
+  color: var(--gold-ink);
 }
 @media (max-width: 1179px) {
   .mobile-menu__links a {
@@ -279,7 +279,7 @@
 .hero__facts .ico {
   width: 15px;
   height: 15px;
-  color: var(--gold);
+  color: var(--gold-ink);
 }
 .hero__facts:has(.ico) li::before {
   display: none;
@@ -316,11 +316,11 @@
 .hero__studios a .ico {
   width: 14px;
   height: 14px;
-  color: var(--gold);
+  color: var(--gold-ink);
   transition: transform 0.4s var(--ease-out);
 }
 .hero__studios a:hover {
-  color: var(--gold-light);
+  color: var(--gold-ink);
 }
 .hero__studios a:hover .ico {
   transform: translate(2px, -2px);
@@ -410,7 +410,7 @@
 .studio-row__meta .ico {
   width: 15px;
   height: 15px;
-  color: var(--gold);
+  color: var(--gold-ink);
 }
 .studio-row__side {
   display: grid;
@@ -423,7 +423,7 @@
   font-size: clamp(1.4rem, 2vw, 1.9rem);
   font-weight: 600;
   white-space: nowrap;
-  color: var(--gold);
+  color: var(--gold-ink);
 }
 .studio-row__price small {
   font-family: var(--font-body);
@@ -453,12 +453,12 @@
   opacity: 1;
 }
 .studio-row.is-active .studio-row__city {
-  color: var(--gold-light);
+  color: var(--gold-ink);
   transform: translateX(10px);
 }
 .studio-row.is-active .studio-row__no,
 .studio-row.is-active .studio-row__go {
-  color: var(--gold);
+  color: var(--gold-ink);
 }
 .studio-row.is-active .studio-row__go .ico {
   transform: translateX(5px);
@@ -515,7 +515,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(0deg, rgba(10, 10, 11, 0.92) 0%, rgba(10, 10, 11, 0.2) 55%, rgba(10, 10, 11, 0.1));
+    background: linear-gradient(0deg, rgba(var(--ink-rgb), 0.92) 0%, rgba(var(--ink-rgb), 0.2) 55%, rgba(var(--ink-rgb), 0.1));
   }
   .studio-preview__body {
     position: absolute;
@@ -540,7 +540,7 @@
     font-weight: 800;
     letter-spacing: 0.24em;
     text-transform: uppercase;
-    color: var(--gold);
+    color: var(--gold-ink);
   }
   .studio-preview__city {
     font-family: var(--font-display);
@@ -559,7 +559,7 @@
     padding: 5px 12px;
     border: 1px solid var(--line-strong);
     border-radius: 999px;
-    background: rgba(10, 10, 11, 0.5);
+    background: rgba(var(--ink-rgb), 0.5);
     font-size: 0.76rem;
     font-weight: 700;
   }
@@ -670,7 +670,7 @@
   padding: 14px 18px 14px 14px;
   border: 1px solid var(--line);
   border-radius: 16px;
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--fill);
   transition:
     border-color 0.4s,
     transform 0.6s var(--ease-out);
@@ -687,7 +687,7 @@
   flex: none;
   border-radius: 12px;
   background: linear-gradient(180deg, var(--gold-light), var(--gold));
-  color: #100d07;
+  color: var(--on-gold);
   font-family: var(--font-display);
   font-size: 1.3rem;
   font-weight: 600;
@@ -714,7 +714,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(0deg, rgba(10, 10, 11, 0.85), transparent 45%);
+  background: linear-gradient(0deg, rgba(var(--ink-rgb), 0.85), transparent 45%);
 }
 .steps__caption {
   position: absolute;
@@ -804,7 +804,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(0deg, rgba(10, 10, 11, 0.45), transparent 50%);
+  background: linear-gradient(0deg, rgba(var(--ink-rgb), 0.45), transparent 50%);
 }
 .feature__no {
   display: block;
@@ -995,7 +995,7 @@
   padding: clamp(24px, 2.6vw, 36px);
   border: 1px solid var(--line-strong);
   border-radius: var(--radius-lg);
-  background: linear-gradient(160deg, rgba(30, 30, 34, 0.9), rgba(16, 16, 18, 0.96));
+  background: linear-gradient(160deg, var(--surface-2), var(--bg-2));
   overflow: hidden;
   isolation: isolate;
   transition:
@@ -1022,7 +1022,7 @@
 }
 .tier--featured {
   border-color: rgba(var(--gold-rgb), 0.6);
-  background: linear-gradient(155deg, rgba(48, 39, 22, 0.95), rgba(18, 18, 20, 0.96) 60%);
+  background: linear-gradient(155deg, var(--card-accent-a), var(--card-accent-b) 60%);
   box-shadow: 0 50px 120px -60px rgba(var(--gold-rgb), 0.7);
 }
 .tier--featured::after {
@@ -1103,7 +1103,7 @@
   font-weight: 800;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--gold-ink);
 }
 .trial__title {
   margin-top: 6px;
@@ -1131,7 +1131,7 @@
   padding: 22px 22px 24px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--fill);
   transition:
     border-color 0.4s,
     transform 0.6s var(--ease-out);
@@ -1149,7 +1149,7 @@
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--gold-light);
+  color: var(--gold-ink);
 }
 .schedule__day ul {
   display: grid;
@@ -1186,7 +1186,7 @@
 }
 .reviews__head .h2 {
   font-size: clamp(4rem, 10vw, 8rem);
-  color: var(--gold);
+  color: var(--gold-ink);
 }
 .reviews__of {
   font-size: 0.4em;
@@ -1214,7 +1214,7 @@
   padding: 26px 28px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--fill);
   overflow: hidden;
   isolation: isolate;
 }
@@ -1239,7 +1239,7 @@
   font-weight: 800;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--gold-ink);
 }
 @media (min-width: 1000px) {
   .reviews__grid {
@@ -1256,7 +1256,7 @@
   overflow: hidden;
   border: 1px solid rgba(var(--gold-rgb), 0.35);
   border-radius: var(--radius-lg);
-  background: linear-gradient(135deg, rgba(40, 33, 20, 0.85), rgba(16, 16, 18, 0.95) 60%);
+  background: linear-gradient(135deg, var(--card-accent-a), var(--card-accent-b) 60%);
   box-shadow: 0 50px 120px -70px rgba(var(--gold-rgb), 0.7);
 }
 .referral__media {
@@ -1309,7 +1309,7 @@
   color: var(--muted);
 }
 .other-studios__label .ico {
-  color: var(--gold);
+  color: var(--gold-ink);
 }
 .other-studios .closing__studios {
   margin-top: 18px;
@@ -1321,10 +1321,124 @@
   margin-top: 18px;
 }
 .footer__col a[aria-current='page'] {
-  color: var(--gold);
+  color: var(--gold-ink);
 }
 .footer__col .tag {
   margin-left: 6px;
   min-height: 20px;
   font-size: 0.58rem;
+}
+
+/* =================================================================
+   Feinschliff für das helle Farbschema
+   ================================================================= */
+
+/* Karten auf hellem Grund: weiße Fläche mit weichem Schatten */
+.schedule__day,
+.step,
+.review {
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+.schedule__day:hover,
+.step:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+/* Linien-Icons, Ziffern und Akzente kräftiger auf Weiß */
+.usp__icon .accent,
+.feature__points svg,
+.offer__included svg {
+  stroke: var(--gold-deep);
+}
+.usp__icon {
+  stroke: var(--text);
+}
+.feature__no {
+  -webkit-text-stroke-color: var(--gold-deep);
+}
+.studio-row__price {
+  color: var(--gold-display);
+}
+.eyebrow__dot {
+  background: var(--gold-deep);
+  box-shadow: none;
+}
+.theme-dark .eyebrow__dot,
+.hero .eyebrow__dot,
+.closing .eyebrow__dot {
+  background: var(--gold);
+  box-shadow: 0 0 12px 1px rgba(var(--gold-rgb), 0.8);
+}
+
+/* Fokus- und Hover-Zustände auf hellem Grund */
+:focus-visible {
+  outline-color: var(--gold-deep);
+}
+.usp:hover::after {
+  opacity: 0.8;
+}
+
+/* Bilder auf hellem Grund: leichter Schatten statt tiefer Schwarz-Schatten */
+.feature__media,
+.steps__visual,
+.studio-preview,
+.offer__banner {
+  box-shadow: var(--shadow-lg);
+}
+
+/* Studio-Liste (Landing): Hover-Fläche in warmem Creme */
+.studio-row__link::before {
+  background: linear-gradient(90deg, var(--bg-3), transparent 75%);
+}
+@media (max-width: 999px) {
+  .studio-row {
+    background: var(--surface);
+    box-shadow: var(--shadow-sm);
+  }
+}
+
+/* Empfehlung: helle Karte mit Goldstich */
+.referral__card {
+  border-color: rgba(var(--gold-rgb), 0.45);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Bildlaufband: Farbbilder statt Graustufen */
+.impressions__item img {
+  filter: none;
+}
+
+/* Mitgliedschaft im hellen Schema: weiße Tarifkarten, Gold als Akzent */
+.tier {
+  background: var(--surface);
+  border-color: var(--line);
+  box-shadow: var(--shadow-sm);
+}
+.tier--featured {
+  background: linear-gradient(155deg, var(--card-accent-a), var(--card-accent-b) 65%);
+  border-color: rgba(var(--gold-rgb), 0.8);
+  box-shadow: 0 40px 90px -45px rgba(var(--gold-rgb), 0.75);
+}
+.tier--featured::after {
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+.tier:hover {
+  box-shadow: 0 40px 90px -50px rgba(var(--ink-rgb), 0.35);
+}
+.price-card {
+  border-color: rgba(var(--gold-rgb), 0.7);
+  box-shadow: 0 50px 110px -60px rgba(var(--gold-rgb), 0.8);
+}
+.price-card::after {
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+.price__value {
+  background: linear-gradient(180deg, var(--gold-deep) 0%, var(--gold-display) 55%, var(--gold-ink) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.trial {
+  background: var(--surface);
+  border-color: rgba(var(--gold-rgb), 0.7);
 }

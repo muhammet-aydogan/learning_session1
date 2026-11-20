@@ -19,7 +19,7 @@
   inset: 0;
   background:
     radial-gradient(70% 60% at 50% 40%, rgba(var(--gold-rgb), 0.16), transparent 70%),
-    linear-gradient(180deg, var(--bg) 0%, rgba(10, 10, 11, 0.78) 30%, rgba(10, 10, 11, 0.86) 65%, #070708 100%);
+    linear-gradient(180deg, var(--bg) 0%, rgba(var(--ink-rgb), 0.78) 30%, rgba(var(--ink-rgb), 0.86) 65%, var(--ink) 100%);
 }
 .closing__inner {
   display: grid;
@@ -47,7 +47,7 @@
   padding: 24px 26px 26px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  background: rgba(18, 18, 20, 0.6);
+  background: var(--glass);
   -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
   transition:
@@ -67,7 +67,7 @@
   font-weight: 800;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--gold-ink);
 }
 .contact-card__label .ico {
   width: 16px;
@@ -119,9 +119,9 @@
     color 0.3s;
 }
 .contact-card__social a:hover {
-  border-color: var(--gold);
+  border-color: var(--gold-ink);
   background: var(--gold);
-  color: #100d07;
+  color: var(--on-gold);
 }
 .contact-card__social .ico {
   width: 18px;
@@ -131,7 +131,7 @@
   transition: color 0.3s;
 }
 .contact-card a:hover {
-  color: var(--gold-light);
+  color: var(--gold-ink);
 }
 .contact-card__more {
   display: block;
@@ -157,7 +157,7 @@
 
 /* ============ I. FOOTER ============ */
 .footer {
-  background: #070708;
+  background: var(--ink);
   border-top: 1px solid var(--line);
   padding-top: clamp(56px, 7vw, 96px);
   font-size: 0.95rem;

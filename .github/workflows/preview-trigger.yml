@@ -1,0 +1,18 @@
+# Auslöser für die Vorschau des hellen Farbschemas.
+# Läuft bei jedem Push auf diesen Branch und startet damit (über workflow_run)
+# den Deploy-Workflow auf main, der diesen Branch unter /hell/ veröffentlicht.
+# Deployments selbst laufen nur auf main – die bestehende Seite bleibt unverändert.
+name: Vorschau helles Farbschema
+
+on:
+  push:
+    branches: [claude/memberfit-helles-farbschema]
+
+permissions:
+  contents: read
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Vorschau wird über den Deploy-Workflow auf main unter /hell/ aktualisiert."

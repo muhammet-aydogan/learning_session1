@@ -51,7 +51,7 @@
   transition: color 0.4s;
 }
 .usp:hover .usp__no {
-  color: var(--gold);
+  color: var(--gold-ink);
 }
 .usp__icon {
   width: 64px;
@@ -162,7 +162,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(0deg, rgba(10, 10, 11, 0.55), transparent 45%);
+  background: linear-gradient(0deg, rgba(var(--ink-rgb), 0.55), transparent 45%);
 }
 .training__badge {
   position: absolute;
@@ -174,7 +174,7 @@
   padding: 20px 24px;
   border: 1px solid rgba(var(--gold-rgb), 0.35);
   border-radius: var(--radius);
-  background: rgba(16, 16, 18, 0.72);
+  background: var(--glass);
   -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
   box-shadow: var(--glow);
@@ -188,7 +188,7 @@
   font-weight: 600;
   line-height: 1;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--gold-ink);
 }
 .training__word {
   position: absolute;
@@ -201,7 +201,7 @@
   line-height: 1;
   text-transform: uppercase;
   color: transparent;
-  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+  -webkit-text-stroke: 1px var(--line);
   pointer-events: none;
   user-select: none;
 }
@@ -228,7 +228,7 @@
   font-family: var(--font-display);
   font-size: 0.9rem;
   letter-spacing: 0.1em;
-  color: var(--gold);
+  color: var(--gold-ink);
 }
 .service h3 {
   font-family: var(--font-display);
@@ -255,7 +255,7 @@
   transform: translateX(10px);
 }
 .service:hover h3 {
-  color: var(--gold-light);
+  color: var(--gold-ink);
 }
 .service:hover .service__arrow {
   stroke: var(--gold);
@@ -311,7 +311,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(0deg, rgba(10, 10, 11, 0.96) 0%, rgba(10, 10, 11, 0.5) 50%, rgba(10, 10, 11, 0.25) 100%);
+  background: linear-gradient(0deg, rgba(var(--ink-rgb), 0.96) 0%, rgba(var(--ink-rgb), 0.5) 50%, rgba(var(--ink-rgb), 0.25) 100%);
 }
 .zone__body {
   position: absolute;
@@ -321,12 +321,12 @@
 }
 .zone__body p {
   max-width: 36ch;
-  color: rgba(245, 242, 236, 0.78);
+  color: var(--muted);
 }
 .zone__no {
   font-family: var(--font-display);
   letter-spacing: 0.12em;
-  color: var(--gold);
+  color: var(--gold-ink);
 }
 .zone__title {
   font-family: var(--font-display);
@@ -398,7 +398,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(0deg, rgba(10, 10, 11, 0.75), transparent 45%);
+  background: linear-gradient(0deg, rgba(var(--ink-rgb), 0.75), transparent 45%);
   opacity: 0.55;
   transition: opacity 0.5s;
 }
@@ -430,7 +430,7 @@
   font-style: normal;
   font-weight: 700;
   letter-spacing: 0.14em;
-  color: var(--gold);
+  color: var(--gold-ink);
 }
 .tile:hover .tile__caption {
   transform: translateY(-6px);
@@ -446,7 +446,7 @@
   height: 46px;
   border-radius: 50%;
   background: var(--gold);
-  color: #100d07;
+  color: var(--on-gold);
   opacity: 0;
   transform: scale(0.6) rotate(-30deg);
   transition:
@@ -514,7 +514,7 @@
     transform: none;
     width: 38px;
     height: 38px;
-    background: rgba(10, 10, 11, 0.6);
+    background: rgba(var(--ink-rgb), 0.6);
     color: var(--text);
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);

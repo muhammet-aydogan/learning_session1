@@ -9,7 +9,8 @@
   border-bottom: 1px solid transparent;
 }
 .nav.is-scrolled {
-  background: rgba(10, 10, 11, 0.72);
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 10px 30px -20px rgba(var(--ink-rgb), 0.35);
   border-bottom-color: var(--line);
   -webkit-backdrop-filter: blur(18px) saturate(140%);
   backdrop-filter: blur(18px) saturate(140%);
@@ -58,7 +59,7 @@
   font-size: 1.12rem;
   font-weight: 700;
   letter-spacing: 0.01em;
-  color: var(--gold);
+  color: var(--gold-ink);
 }
 .brand__place {
   font-size: 0.62rem;
@@ -82,7 +83,7 @@
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(245, 242, 236, 0.78);
+  color: var(--muted);
   transition: color 0.3s;
 }
 .nav__links a::after {
@@ -134,7 +135,7 @@
   top: 27px;
 }
 .burger[aria-expanded='true'] {
-  border-color: var(--gold);
+  border-color: var(--gold-ink);
 }
 .burger[aria-expanded='true'] span {
   top: 23px;
@@ -217,7 +218,7 @@
     color 0.3s;
 }
 .mobile-menu__links a:active {
-  color: var(--gold);
+  color: var(--gold-ink);
 }
 .mobile-menu__links em {
   font-family: var(--font-body);
@@ -225,7 +226,7 @@
   font-style: normal;
   font-weight: 700;
   letter-spacing: 0.14em;
-  color: var(--gold);
+  color: var(--gold-ink);
 }
 .menu-open .mobile-menu__links a {
   opacity: 1;

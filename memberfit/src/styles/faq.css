@@ -86,7 +86,7 @@
   transform: rotate(90deg);
 }
 .acc__trigger:hover .acc__icon {
-  border-color: var(--gold);
+  border-color: var(--gold-ink);
 }
 
 /* Höhe animiert über grid-template-rows (0fr → 1fr) */
@@ -124,16 +124,16 @@
 }
 .acc.is-open .acc__no,
 .acc.is-open .acc__q {
-  color: var(--gold);
+  color: var(--gold-ink);
 }
 .acc.is-open .acc__icon {
   background: var(--gold);
-  border-color: var(--gold);
+  border-color: var(--gold-ink);
   transform: rotate(180deg);
 }
 .acc.is-open .acc__icon::before,
 .acc.is-open .acc__icon::after {
-  background: #100d07;
+  background: var(--on-gold);
 }
 .acc.is-open .acc__icon::after {
   transform: rotate(0deg);

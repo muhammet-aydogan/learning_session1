@@ -53,8 +53,8 @@
 
 /* Primär: Gold mit Lichtreflex beim Hover */
 .btn--primary {
-  color: #100d07;
-  background: linear-gradient(180deg, var(--gold-light), var(--gold) 55%, #c4954a);
+  color: var(--on-gold);
+  background: linear-gradient(180deg, var(--gold-light), var(--gold) 55%, var(--gold-deep));
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.45),
     0 14px 40px -16px rgba(var(--gold-rgb), 0.7);
@@ -82,7 +82,7 @@
 .btn--ghost {
   color: var(--text);
   border: 1px solid var(--line-strong);
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--fill);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
@@ -97,7 +97,7 @@
   transition: transform 0.55s var(--ease-out);
 }
 .btn--ghost:hover {
-  color: #0a0a0b;
+  color: var(--bg);
   border-color: var(--text);
 }
 .btn--ghost:hover::before {
@@ -109,7 +109,7 @@
   min-height: 44px;
   padding: 0;
   border-radius: 0;
-  color: var(--gold-light);
+  color: var(--gold-ink);
   overflow: visible;
 }
 .btn--line::after {
@@ -138,7 +138,7 @@
   text-transform: uppercase;
 }
 .chip--gold {
-  color: #100d07;
+  color: var(--on-gold);
   background: var(--gold);
 }
 .chip--muted {

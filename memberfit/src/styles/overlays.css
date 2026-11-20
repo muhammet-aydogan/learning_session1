@@ -55,7 +55,7 @@
   text-transform: uppercase;
 }
 .lightbox__caption span:last-child {
-  color: var(--gold);
+  color: var(--gold-ink);
 }
 .lightbox__nav,
 .lightbox__close {
@@ -85,8 +85,8 @@
 .lightbox__nav:hover,
 .lightbox__close:hover {
   background: var(--gold);
-  border-color: var(--gold);
-  color: #100d07;
+  border-color: var(--gold-ink);
+  color: var(--on-gold);
 }
 .lightbox__close {
   position: absolute;
